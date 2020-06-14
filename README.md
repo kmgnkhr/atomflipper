@@ -20,5 +20,5 @@ ESP32-BLE-Keyboard  https://github.com/T-vK/ESP32-BLE-Keyboard
 
 ## 感想
 
-ワイヤレスにできるからM5StickCを使ってたけど、すぐにバッテリ切れするので難儀してた。
+ワイヤレスにできるからM5StickCを使ってたけど、すぐにバッテリ切れするので難儀してた。  
 M5AtomLiteで十分だったんだなあ。（しみじみ）
