@@ -8,10 +8,12 @@ enum ScanPhase {
   kIdle,
   kWaitRelease,
   kWaitPress,
+  kRepeated,
 };
 
 const uint32_t kSleepInterval = 5*60*1000;
 const uint32_t kDetectTerm = 150;
+const uint32_t kRepeatInterval = 500;
 
 }  // namespace
 
@@ -39,8 +41,9 @@ int M5Ex::ButtonEx::scan() {
     case kWaitRelease:
       if (button_.wasReleased()) {
         next = kWaitPress;
-      } else if (delta > kDetectTerm) {
-        clicks = 1;
+      } else if (delta > kRepeatInterval) {
+        next = kRepeated;
+        clicks = -1;
       }
       break;
     case kWaitPress:
@@ -48,6 +51,11 @@ int M5Ex::ButtonEx::scan() {
         clicks = 2;
       } else if (delta > kDetectTerm) {
         clicks = 1;
+      }
+      break;
+    case kRepeated:
+      if (button_.wasReleased()) {
+        next = kIdle;
       }
       break;
   }

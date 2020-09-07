@@ -55,7 +55,7 @@ void loop() {
     case 1:
       bleKeyboard.write(KEY_LEFT_ARROW);
       break;
-    case 2:
+    case -1:
       bleKeyboard.write(KEY_RIGHT_ARROW);
       break;
   }
