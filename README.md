@@ -10,7 +10,7 @@ https://github.com/kmgnkhr/pageflipper
 Bluetoothのデバイス一覧に"AtomFlipper"という名前で出てくるので接続。
 
 * Btn単押しで CURSOR LEFT  
-* Btnダブルクリックで CURSOR RIGHT
+* Btn長押しで CURSOR RIGHT
 
 電子書籍のマンガ（右綴じ）を読みたいのでFORWARDがLEFTとなります。
 
